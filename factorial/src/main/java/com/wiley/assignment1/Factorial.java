@@ -37,8 +37,6 @@ public class Factorial {
 
 		boolean valid = true;
 
-		this.printStream.print("Please write a number between 1 and 10: ");
-
 		while(valid){
 			this.num = this.scanner.nextInt();
 
