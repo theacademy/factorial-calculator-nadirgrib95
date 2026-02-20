@@ -34,21 +34,20 @@ public class Factorial {
 		*/
 
 		//YOUR CODE STARTS HERE
-
-		boolean valid = true;
-
-		while(valid){
-			this.num = this.scanner.nextInt();
-
-			if(this.num >= 1 && this.num <= 10){
-				valid = false;
-			}else {
+		int result = -1; //Invalid return
+		try {
+			this.num = scanner.nextInt();
+			if (this.num >= 1 && this.num <= 10) {
+				result = this.num; //If input is good, we assign the input to the variable result
+		 	} else {
 				this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
 			}
+		} catch (Exception e) {
+			//Catch string inputs
+			this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
 		}
 
-		return this.num;
-
+		return result; //We keep one return for better readability
 		//YOUR CODE ENDS HERE
 		 
 			
